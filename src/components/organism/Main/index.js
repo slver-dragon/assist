@@ -1,14 +1,22 @@
 import React from "react";
-import style from "./style.module.scss";
 import Button from "../../atom/Button";
+import { Link } from "react-router-dom";
+import style from "./style.module.scss";
 
 const Main = () => {
   return (
     <div className={style.main}>
       <div className={style.container}>
-        <Button text="1" />
-        <Button text="2" />
+        <Link to="pomodoro">
+          <Button text="Pomodoro" />
+        </Link>
+        <Link to="note">
+          <Button text="Заметки" />
+        </Link>
         <Button text="3" />
+        <Link to="rest">
+          <Button text="Отдых" />
+        </Link>
       </div>
 
     </div>
